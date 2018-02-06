@@ -8,9 +8,14 @@ t.pattern = Dir.glob('spec/*_spec.rb')
 t.rspec_opts = '--format documentation'
 end
 
-namespace :terminal_trivia do
-  desc "First Trivia Challenge"
+namespace :run_trivia do
+  desc "Data Types and Variables Trivia Challenge"
   task :"1" => [] do
     ruby "trivia/01_data_types_and_variables/runner.rb"
+  end
+
+  desc "Methods Trivia Challenge"
+  task :"2" => [] do
+    ruby "trivia/02_methods/runner.rb"
   end
 end
