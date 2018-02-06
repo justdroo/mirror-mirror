@@ -6,7 +6,7 @@ Module 1: Datatypes & Variables
 - run test suite: `rspec spec/01_data_types_and_variables_spec.rb`
 - up Sinatra `rake run_lab:1`
     - or `ruby labs/01_data_types_and_variables/hello_world.rb`
-- should be no errors and have a quick mad lib sentence
+    - should be no errors and have a quick mad lib sentence
 
 
 TROUBLESHOOT:
