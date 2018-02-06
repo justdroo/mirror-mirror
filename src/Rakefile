@@ -19,3 +19,10 @@ namespace :run_trivia do
     ruby "trivia/02_methods/runner.rb"
   end
 end
+
+namespace :run_lab do
+  desc "Lab I: Mad lib statements in Sinatra"
+  task :"1" => [] do
+    ruby "labs/01_data_types_and_variables/hello_world.rb"
+  end
+end

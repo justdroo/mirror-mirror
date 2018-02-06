@@ -1,11 +1,11 @@
-NOTES FOR DREW:
+(directory root: `src`)
 
 Module 1: Datatypes & Variables
-
-(directory root: `src`)
-- pass trivia: `ruby trivia/01_data_types_and_variables/runner.rb`
+- pass trivia: `rake run_trivia:1`
+    - or `ruby trivia/01_data_types_and_variables/runner.rb`
 - run test suite: `rspec spec/01_data_types_and_variables_spec.rb`
-- up Sinatra `ruby labs/01_data_types_and_variables/hello_world.rb`
+- up Sinatra `rake run_lab:1`
+    - or `ruby labs/01_data_types_and_variables/hello_world.rb`
 - should be no errors and have a quick mad lib sentence
 
 
