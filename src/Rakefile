@@ -1,0 +1,16 @@
+require 'rake'
+require 'rspec/core/rake_task'
+
+task :default => :spec
+
+RSpec::Core::RakeTask.new(:spec) do |t|
+t.pattern = Dir.glob('spec/*_spec.rb')
+t.rspec_opts = '--format documentation'
+end
+
+namespace :terminal_trivia do
+  desc "First Trivia Challenge"
+  task :"1" => [] do
+    ruby "trivia/01_data_types_and_variables/runner.rb"
+  end
+end
