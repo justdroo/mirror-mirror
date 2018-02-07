@@ -22,7 +22,6 @@ class Lab
 
   def return_true
     # write a conditional statement that will always return true
-    binding
   end
 
   def return_false
