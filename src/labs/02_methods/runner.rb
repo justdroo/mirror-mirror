@@ -3,7 +3,7 @@ require_relative '02_methods_answer_lab'
 @shelter = MethodLab.new()
 
 #change the name of your shelter by changing this variable by invoking 'name' on @shelter
-shelter_name = @shelter.name
+shelter_name = "UNDEFINED"
 
 line    = "============================"
 columns = "||                        ||"
