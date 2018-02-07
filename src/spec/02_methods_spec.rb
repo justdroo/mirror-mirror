@@ -21,18 +21,22 @@ describe MethodLab do
       sorted_keys = result.keys.sort
 
       expect(result).to be_a_kind_of(Hash)
-      expect(sorted_keys[0]).to eq('age')
-      expect(sorted_keys[1]).to eq('job')
-      expect(sorted_keys[2]).to eq('name')
+      expect(sorted_keys[0]).to eq(:age)
+      expect(sorted_keys[1]).to eq(:name)
+      expect(sorted_keys[2]).to eq(:occupation)
     end
 
     it "#perfect_match" do
-      adjectives = ["friendly", "fast"]
-      result = @animal_shelter.perfect_match(adjectives[0], adjectives[1])
+      animal = "alligator"
+      customer = {
+        name: "Dr. Oo",
+        age: "287",
+        occupation: "develop the web"
+      }
+      result = @animal_shelter.perfect_match(animal, customer)
 
-      expect(result).to be_a_kind_of(Array)
-      expect(result[0]).to eq(adjectives[0])
-      expect(result[1]).to eq(adjectives[1])
-      expect(result[2]).to eq("cute")
+      expect(result).to be_a_kind_of(Hash)
+      expect(result[:status]).to be(200)
+      expect(result[:message]).to eq("#{customer[:name]} became the pet parent of a #{animal}")
     end
 end
