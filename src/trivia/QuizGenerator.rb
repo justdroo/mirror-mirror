@@ -80,12 +80,12 @@ class QuizGenerator
     input = gets.chomp
 
     if input.downcase == problem[:solution].downcase
-      puts "Correct!"
+      puts "✅ Correct!"
       puts "-----------------------------"
       puts "-----------------------------"
       firstAttempt ? 1 : 0
     else
-      puts "Incorrect, try again."
+      puts "❌ Incorrect, try again."
       puts ""
       selection(problem, false)
     end
