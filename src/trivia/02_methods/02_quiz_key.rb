@@ -1,6 +1,6 @@
 @quiz_key = {
   section_title: "Methods",
-  instructions: "Answer the questions to the best of your abilities, if you get stuck, don't forget to ask for help!",
+  instructions: "Get ready to define some methods! Remeber, your peers can help you answer questions. Try and explain your logic before answering the question."
   quiz: [
     {
       type: "short_answer",

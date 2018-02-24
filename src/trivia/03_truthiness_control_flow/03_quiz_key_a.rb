@@ -1,6 +1,6 @@
-@quiz_key = {
+@quiz_key_a = {
   section_title: "Truthiness Mini Trivia",
-  instructions: "Answer the questions to the best of your abilities, if you get stuck, don't forget to ask for help!",
+  instructions: "This is a hard one! Remember to talk it out and if you get stuck, ask for help or use the internet.",
   quiz: [
     {
       type: "multiple_choice",
