@@ -32,8 +32,8 @@ If at any time the human or computer player collects 4 of a kind, those cards ar
 
 ### Winning
 
-Once the deck is gone and there are no more cards to be played, the game is over and the player with the most points wins.
+Once the deck is depleted AND there are no more cards to be played, the game is over and the player with the most points wins.
 
 ### Additional Rules
 
-If at any point a player runs out of cards in their hands during a turn, and there are still cards in the deck, they will receive an additional 5 cards and continue their turn. 
+If at any point a player runs out of cards in their hands during a turn, and there are still cards in the deck, they will receive an additional 5 cards and continue their turn.
