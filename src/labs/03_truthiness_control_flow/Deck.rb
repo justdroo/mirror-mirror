@@ -1,4 +1,7 @@
 class Deck
+
+  attr_reader :cards
+
   def initialize
     @cards = starting_deck
   end
@@ -27,7 +30,7 @@ class Deck
   private
 
   def starting_deck
-    cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K"]
+    cards = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
     fifty_two_cards = []
     cards.each { |card| 4.times { fifty_two_cards << card } }
 
