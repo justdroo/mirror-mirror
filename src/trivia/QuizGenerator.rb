@@ -25,6 +25,7 @@ class QuizGenerator
     puts "When you are ready to begin, type 'Start' and hit enter."
     puts "If you would like to exit, hit ctrl + c"
 
+    print ">> "
     start_response = gets.chomp
 
    if ready?(start_response)
@@ -67,9 +68,11 @@ class QuizGenerator
         puts ""
         puts "Please type the key for the best answer from above."
         puts "(hit enter when you are ready to submit)"
+        print ">> "
         user_input_multiple_choice(problem, firstAttempt)
       when "short_answer"
         puts ""
+        print ">> "
         user_input_short_answer(problem, firstAttempt)
       else
         puts "Trouble loading problem set...Make sure each questions has a type"
@@ -80,12 +83,12 @@ class QuizGenerator
     input = gets.chomp
 
     if input.downcase == problem[:solution].downcase
-      puts "Correct!"
+      puts "✅ Correct!"
       puts "-----------------------------"
       puts "-----------------------------"
       firstAttempt ? 1 : 0
     else
-      puts "Incorrect, try again."
+      puts "❌ Incorrect, try again."
       puts ""
       selection(problem, false)
     end
@@ -102,8 +105,8 @@ class QuizGenerator
     else
       puts "Incorrect, try again."
       puts ""
-      print "HINT:"
-      puts problem[:hint]
+      puts "HINT:" if problem[:hint]
+      puts problem[:hint] if problem[:hint]
       selection(problem, false)
     end
   end
