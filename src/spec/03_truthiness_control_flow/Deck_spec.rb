@@ -1,4 +1,4 @@
-require_relative '../labs/03_truthiness_control_flow/Deck.rb'
+require_relative '../../labs/03_truthiness_control_flow/Deck.rb'
 
 describe Deck do
   describe 'Standard 52 card deck of cards'

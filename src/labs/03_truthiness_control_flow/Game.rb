@@ -21,10 +21,10 @@ class Game
     end
   end
 
-  def start(players, deck)
+  def start(players, deck, hand_size)
     deck.shuffle_cards
     players.each do |player|
-      cards = deck.deal(7)
+      cards = deck.deal(hand_size)
       player.add_to_hand(cards)
     end
   end
@@ -77,16 +77,8 @@ class Game
     player.add_to_hand(deck.pick_top_card)
   end
 
-  def change_turn(players)
-    players.each do |player|
-      if player.id != @turn
-        @turn = player.id
-      end
-    end
-  end
-
   def finished(human, computer, deck)
-    true if deck.cards_remaining == 0 || human.hand.count == 0 || computer.hand.count == 0
+    true if deck.cards.length == 0 || human.hand.count == 0 || computer.hand.count == 0
   end
 
   def get_user_input

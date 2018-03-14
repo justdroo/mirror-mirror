@@ -20,7 +20,7 @@ require 'byebug'
 player_is_ready = @game.ready
 
 if player_is_ready
-  @game.start(@players, @deck)
+  @game.start(@players, @deck, 7)
 else
   return nil
 end

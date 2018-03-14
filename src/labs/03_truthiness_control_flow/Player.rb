@@ -2,7 +2,7 @@ class Player
   attr_accessor :hand, :points
   attr_reader :type
 
-  def initialize(type)
+  def initialize(type = 'computer')
     @hand = []
     @points = 0
     @type = type
