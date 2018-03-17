@@ -1,5 +1,5 @@
-# require_relative '02_methods'
-require_relative '02_methods_answer_lab'
+# require_relative 'adopt_a_pet'
+require_relative 'adopt_a_pet_solved'
 @shelter = MethodLab.new()
 
 #change the name of your shelter by changing this variable by invoking 'name' on @shelter
