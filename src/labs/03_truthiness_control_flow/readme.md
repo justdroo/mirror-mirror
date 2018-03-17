@@ -27,6 +27,25 @@ At the beginning of a turn, the players turn is first announced, then the player
 If they choose incorrectly, they will go fish (pick a card from the top of the deck and add it to their hand).
 At this point, the turn will switch to the other player.
 
+## Tests
+
+To run all tests on this lab, enter into the terminal:
+`rspec spec/03_truthiness_control_flow`
+
+You should see that some of the tests have already been completed. If you want to only run a specific file, add the file name to the path. For example:
+
+`rspec spec/03_truthiness_control_flow/Game.rb`
+
+## Lab
+
+Either
+
+`rake run_lab:3`
+
+or
+
+`ruby labs/03_truthiness_control_flow/runner.rb`
+
 #### Bonus
 Once you get the lab completed, try out some of these challenges below.
 
