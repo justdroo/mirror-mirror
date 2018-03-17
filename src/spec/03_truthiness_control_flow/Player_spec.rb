@@ -17,7 +17,7 @@ describe Player do
       # Here you'll be calling the method you want to test
 
       # ASSERT
-      # Finally you state you assertions of what everything should look like
+      # Finally you state your assertions of what everything should look like
 
       # Let's take a look at Player#add_to_hand
       #
@@ -32,6 +32,7 @@ describe Player do
       # // ASSERT //
       #
       # expect(player.hand).to equal(new_cards)
-      #
+      # # Right now this will fail because the method is returning `four_of_a_kind`, is there a better place to call this method?
+      # # How can you change this method to make the test pass?
     end
 end

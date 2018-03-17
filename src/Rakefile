@@ -34,4 +34,8 @@ namespace :run_lab do
   task :"2" => [] do
     ruby "labs/02_methods/runner.rb"
   end
+
+  task :"3" => [] do
+    ruby "labs/03_truthiness_control_flow/runner_blanks.rb"
+  end
 end

@@ -19,13 +19,14 @@ class Game
   def ready
     puts "Type Start to begin playing"
     user_input = get_user_input
-    # if user_input is equal to 'start', you should return true
-    # otherwise return false
-    # Bonus: Is there a difference between 'start' & 'Start'?
+    if user_input.downcase == "start"
+      @begin = true
+    else
+      @begin
+    end
   end
 
   def start(deck:, human:, computer: )
-    # HINT :: These variables are available in all you methods now! You don't have to pass them in as parameters, just call them with @variable_name
     @human = human
     @computer = computer
     @deck = deck
@@ -40,13 +41,20 @@ class Game
   end
 
   def finished
-    # The game is over when the deck has no cards or one player has no cards in their hand
+    if @deck.cards.length == 0 || @human.hand.count == 0 || @computer.hand.count == 0
+      return true
+    else
+      return false
+    end
   end
 
   def switch_turn
-    # Use player.type to find out if they are the human or the computer, then set @players_turn = next_player
-    # You'll want to be returning the player object, or the instance of the player (@human, @computer)
-    # How could you use a case statement to keep this clean?
+    case @players_turn.type
+    when 'human'
+      @players_turn = @computer
+    when 'computer'
+      @players_turn = @human
+    end
   end
 
   def announce_turn
@@ -67,10 +75,13 @@ class Game
     puts "Select a card #{@players_turn.type}"
     puts ""
 
-    # you'll need to check the players type for this turn again to determine if they are 'human' or 'computer'
-    # If they are a computer, set the @bait_card to @computer.auto_select
-    # If they are human, set @bait_card to get_user_input.upcase
-    # Bonus: What if they come up as neither? What should the bait card be set to then?
+    if @players_turn.type == 'human'
+      @bait_card = get_user_input.upcase
+    elsif @players_turn.type == 'computer'
+      @bait_card = @players_turn.auto_select
+    else
+      @bait_card = "🃏"
+    end
   end
 
   def check_card
