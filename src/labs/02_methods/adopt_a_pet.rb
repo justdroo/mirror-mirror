@@ -1,4 +1,5 @@
 class MethodLab
+  
   # name should be a method that returns the name of your shelter as a string
 
   def looking_for

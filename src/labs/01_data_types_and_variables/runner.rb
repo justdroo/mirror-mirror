@@ -1,4 +1,4 @@
-require_relative './01_data_types_and_variables'
+require_relative './mad_lib'
 
 madLib = Lab.new()
 
