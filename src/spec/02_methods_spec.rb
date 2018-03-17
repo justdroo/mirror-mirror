@@ -1,4 +1,4 @@
-require_relative '../labs/02_methods/02_methods.rb'
+require_relative '../labs/02_methods/adopt_a_pet.rb'
 
 describe MethodLab do
   describe 'Defining and Invoking Methods'

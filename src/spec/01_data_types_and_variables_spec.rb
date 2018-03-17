@@ -1,4 +1,4 @@
-require_relative '../labs/01_data_types_and_variables/01_data_types_and_variables'
+require_relative '../labs/01_data_types_and_variables/mad_lib'
 # could write a spec helper to make sure everything is loaded in correctly instead of requiring each file that you need
 
 describe Lab do
