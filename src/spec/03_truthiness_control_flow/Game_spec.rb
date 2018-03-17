@@ -97,6 +97,25 @@ describe Game do
       expect(rules_met).to eq(false)
     end
 
+    it "#switch_turn : Returns the player object for the new turn" do
+      # ARRANGE
+        game = Game.new()
+        human = Player.new('human')
+        computer = Player.new('computer')
+        game.start(
+          human: human,
+          computer: computer,
+          deck: Deck.new()
+        )
+      # ACT
+      computers_turn = game.switch_turn
+      humans_turn = game.switch_turn
+
+      #ASSERT
+      expect(computers_turn).to be(computer)
+      expect(humans_turn).to be(human)
+    end
+
     it "#pick_card : Prompts player to select a card and returns their answer after printing the selection to the screen. Autoselects when player is a computer" do
       # ARRANGE
       game = Game.new()

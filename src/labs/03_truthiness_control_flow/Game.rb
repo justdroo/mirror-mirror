@@ -19,14 +19,13 @@ class Game
   def ready
     puts "Type Start to begin playing"
     user_input = get_user_input
-    if user_input.downcase == "start"
-      @begin = true
-    else
-      @begin
-    end
+    # if user_input is equal to 'start', you should return true
+    # otherwise return false
+    # Bonus: Is there a difference between 'start' & 'Start'?
   end
 
   def start(deck:, human:, computer: )
+    # HINT :: These variables are available in all you methods now! You don't have to pass them in as parameters, just call them with @variable_name
     @human = human
     @computer = computer
     @deck = deck
@@ -41,20 +40,13 @@ class Game
   end
 
   def finished
-    if @deck.cards.length == 0 || @human.hand.count == 0 || @computer.hand.count == 0
-      return true
-    else
-      return false
-    end
+    # The game is over when the deck has no cards or one player has no cards in their hand
   end
 
   def switch_turn
-    case @players_turn.type
-    when 'human'
-      @players_turn = @computer
-    when 'computer'
-      @players_turn = @human
-    end
+    # Use player.type to find out if they are the human or the computer, then set @players_turn = next_player
+    # You'll want to be returning the player object, or the instance of the player (@human, @computer)
+    # How could you use a case statement to keep this clean?
   end
 
   def announce_turn
@@ -75,13 +67,10 @@ class Game
     puts "Select a card #{@players_turn.type}"
     puts ""
 
-    if @players_turn.type == 'human'
-      @bait_card = get_user_input.upcase
-    elsif @players_turn.type == 'computer'
-      @bait_card = @players_turn.auto_select
-    else
-      @bait_card = "🃏"
-    end
+    # you'll need to check the players type for this turn again to determine if they are 'human' or 'computer'
+    # If they are a computer, set the @bait_card to @computer.auto_select
+    # If they are human, set @bait_card to get_user_input.upcase
+    # Bonus: What if they come up as neither? What should the bait card be set to then?
   end
 
   def check_card
@@ -132,39 +121,6 @@ class Game
     sleep 1
     @players_turn.add_to_hand(@deck.pick_top_card)
   end
-
-#
-#
-#
-#
-  # def take_turn(player)
-  #   player.your_turn
-  #   puts "Select a card #{player.type}"
-  #   puts ""
-  #   card = select_card(player)
-  #   puts "#{player.type} selected #{card}..."
-  #   card
-  # end
-  #
-  # # def check_card(players_turn, players, selected_card)
-  # #   players.each do |player|
-  # #     if player != players_turn
-  # #       return player.hand.include?(selected_card)
-  # #     end
-  # #   end
-  # # end
-  #
-  # def select_card(player)
-  #   if player.type == 'human'
-  #     get_user_input
-  #   elsif player.type == 'computer'
-  #     player.auto_select
-  #   end
-  # end
-
-  # def go_fish(player)
-  #   player.add_to_hand(@deck.pick_top_card)
-  # end
 
   private
 

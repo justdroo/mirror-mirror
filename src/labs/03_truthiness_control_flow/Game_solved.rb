@@ -133,39 +133,6 @@ class Game
     @players_turn.add_to_hand(@deck.pick_top_card)
   end
 
-#
-#
-#
-#
-  # def take_turn(player)
-  #   player.your_turn
-  #   puts "Select a card #{player.type}"
-  #   puts ""
-  #   card = select_card(player)
-  #   puts "#{player.type} selected #{card}..."
-  #   card
-  # end
-  #
-  # # def check_card(players_turn, players, selected_card)
-  # #   players.each do |player|
-  # #     if player != players_turn
-  # #       return player.hand.include?(selected_card)
-  # #     end
-  # #   end
-  # # end
-  #
-  # def select_card(player)
-  #   if player.type == 'human'
-  #     get_user_input
-  #   elsif player.type == 'computer'
-  #     player.auto_select
-  #   end
-  # end
-
-  # def go_fish(player)
-  #   player.add_to_hand(@deck.pick_top_card)
-  # end
-
   private
 
   def get_user_input
