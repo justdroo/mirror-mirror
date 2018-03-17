@@ -1,39 +1,38 @@
-# Rules of Go Fish
+# Go Fish 🐟
 
 ### DECK
 
-A standard 52 card pack
-A,2,3,4,5,6,7,8,9,J,Q,K x Clubs, Spades, Diamonds, Hearts
+A standard 52 card pack of 13 cards in 4 suits.
+(A,2,3,4,5,6,7,8,9,J,Q,K x Clubs, Spades, Diamonds, Hearts)
+
+However, for this game we will only need to know the values, not the suits
 
 ### Objective
 
-Collect the most 4 of a kinds such as 4 kings, 4 aces, 4 threes and so on.
+Collect the most 4 of a kinds before the game ends. For example 4 kings, 4 aces, 4 threes and so on.
 
 ### Starting the game
 
-For the purpose of this lab, only you and the computer will be playing.
-Deal seven cards each to yourself and the computer. The remaining cards will form the deck players will pick from.
+For the purpose of this lab, only one human and the computer will be playing.
+Once the player is ready, the game will start and deal 7 cards to both the human and the computer. Turn is hardcoded to start with the human.
+
+### Ending the Game
+
+Once there are no cards in the deck OR the human's hand OR the computer's hand, the game is over.
 
 ### Gameplay
 
-Starting with the human player, allow them to see their hand (but not the computers) and ask the computer for a type of card. For example:
-```
-A,2,2,5,7,J,J
+At the beginning of a turn, the players turn is first announced, then the player is asked to pick a card as the bait card. If the bait card matches a card in the other players hand, those cards will be transferred back to the player whose turn it is. They will continue picking cards until they guess wrong.
 
-Do you have any...
->>
-```
+If they choose incorrectly, they will go fish (pick a card from the top of the deck and add it to their hand).
+At this point, the turn will switch to the other player.
 
-If the card they request is in the computers hand, the computer transfers all of their matching cards to the human player and the human may ask again. Otherwise, the computer will say `Go Fish!` and you will add a card from the deck to the human's hand. At this point the human's turn is over.
+#### Bonus
+Once you get the lab completed, try out some of these challenges below.
 
-Now it is the computers turn. You will need to figure out the best way of programmatically selecting a card from their hand to ask the human.
-
-If at any time the human or computer player collects 4 of a kind, those cards are removed from their hand and that player is given a point.
-
-### Winning
-
-Once the deck is depleted AND there are no more cards to be played, the game is over and the player with the most points wins.
-
-### Additional Rules
-
-If at any point a player runs out of cards in their hands during a turn, and there are still cards in the deck, they will receive an additional 5 cards and continue their turn.
+- The Player class is a mess and we don't have any tests! Check out the spec folder and try writing some tests for the Player class. You might need to refactor the methods to work. Look at some of the other tests written for this lab.
+- Take a look at the Deck class, can you understand what they methods are doing? Google around and see if you can figure it out!
+- What is a private method?
+- What is an `attr_accessor` and how is it related to `attr_reader` and `attr_writer`?
+- What if both players were computers? What if they were both human?
+- How would you play with more than 2 players?
