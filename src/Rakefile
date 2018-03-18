@@ -23,6 +23,11 @@ namespace :run_trivia do
   task :"3" => [] do
     ruby "trivia/03_truthiness_control_flow/runner.rb"
   end
+
+  desc "Debugging Trivia Challenge"
+  task :"4" => [] do
+    ruby "trivia/04_debugging/runner.rb"
+  end
 end
 
 namespace :run_lab do
