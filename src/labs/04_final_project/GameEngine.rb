@@ -1,6 +1,6 @@
 class GameEngine
-  def text_match(choice, good)
-    if good.include?(choice)
+  def text_match(choice, pass_words)
+    if pass_words.include?(choice)
       true
     else
       false
