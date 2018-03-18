@@ -4,13 +4,15 @@ TROUBLESHOOT:
 
     # TODO BEFORE TUESDAY
     - Complete
-        - Final Project
+        - Final Project - lab ✅
+        - Debugging lecture
+        - Debugging trivia
         - Introduction
     - Update readme's
         - 01 lab ✅
         - 02 lab ✅
         - 03 lab ✅
-        - Final project
+        - Final project ✅
         - Introduction
     - Stress test
         - Introduction
