@@ -5,8 +5,9 @@ TROUBLESHOOT:
     # TODO BEFORE TUESDAY
     - Complete
         - Final Project - lab ✅
-        - Debugging lecture
-        - Debugging trivia
+        - Debugging lecture ✅
+        - Debugging trivia ✅
+        - Lecture Screenshots to ruby ✅
         - Introduction
     - Update readme's
         - 01 lab ✅
