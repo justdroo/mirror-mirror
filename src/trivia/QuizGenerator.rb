@@ -1,7 +1,7 @@
 class QuizGenerator
   attr_accessor :points
 
-  def initialize(quiz_key, answer_key)
+  def initialize(quiz_key, answer_key = nil)
     @quiz_key = quiz_key
     @answer_key = answer_key
     @points = 0
