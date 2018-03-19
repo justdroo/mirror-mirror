@@ -1,15 +1,3 @@
-def overview
-  puts ""
-  puts "CONDITIONAL STATMENTS"
-  puts ""
-  puts " --> if statements"
-  puts ""
-  puts " --> case statements"
-  puts ""
-  puts " --> loops"
-  puts ""
-end
-
 def say_hello(language)
   case language
   when "Azerbaijani"
@@ -24,5 +12,3 @@ def say_hello(language)
     print "0010010101001010100010"
   end
 end
-
-overview
