@@ -1,3 +1,4 @@
+require 'byebug'
 # key must return boolean
 class AnswerKey
 
@@ -11,8 +12,7 @@ class AnswerKey
   end
 
   def define_method(problem, input)
-    input_trimmed = input.trim
-    input_trimmed == "def say_hello" ? true : false
+    input.include?("def say_hello")
   end
 
   def accept_argument(problem, input)

@@ -28,3 +28,5 @@ def truthiness_in_ruby
   puts column + line + column
   puts column + line + column
 end
+
+truthiness_in_ruby

@@ -20,3 +20,4 @@ def returning_values
   puts column + line + column
   puts column + line + column
 end
+returning_values

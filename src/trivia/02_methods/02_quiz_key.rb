@@ -1,6 +1,6 @@
 @quiz_key = {
   section_title: "Methods",
-  instructions: "Get ready to define some methods! Remeber, your peers can help you answer questions. Try and explain your logic before answering the question."
+  instructions: "Get ready to define some methods! Remeber, your peers can help you answer questions. Try and explain your logic before answering the question.",
   quiz: [
     {
       type: "short_answer",
@@ -38,7 +38,7 @@
         b: "ERROR: undefined variable 'language'",
         c: "Hello student welcome to our class on ruby"
       },
-      solution: "c"
+      solution: "b"
     },
     {
       type: "multiple_choice",

@@ -1,7 +1,7 @@
 class Lab
   def return_a_string
     # return a string with a name
-
+"Drew"
   end
 
   def return_an_integer

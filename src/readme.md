@@ -8,7 +8,7 @@ TROUBLESHOOT:
         - Debugging lecture ✅
         - Debugging trivia ✅
         - Lecture Screenshots to ruby ✅
-        - Introduction
+        - Introduction ✅
     - Update readme's
         - 01 lab ✅
         - 02 lab ✅
