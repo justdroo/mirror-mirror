@@ -45,10 +45,10 @@ In the command line, type `cd ~` to change the directory to your home folder. Ne
 
 BE SURE YOU ARE IN THE `src` FOLDER! Running commands outside of this folder will result in errors or seeing 0 examples on the tests.
 
-`pwd` - print working directory, tells you which folder you are currently in
-`cd folder` - change directory to folder
-`cd ..` - go up one directory
-`ls` - list all folders and files in this directory
+- `pwd` - print working directory, tells you which folder you are currently in
+- `cd folder` - change directory to folder
+- `cd ..` - go up one directory
+- `ls` - list all folders and files in this directory
 
 #### Trivia
 
